@@ -1,0 +1,518 @@
+//colors
+$white: #fff;
+$bgForkSubscriptionPricing: #4b3b4e;
+
+//fonts
+$montserrat: 'Montserrat', sans-serif;
+$lato: 'Lato', sans-serif;
+
+//mixins
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 993px) {
+    .forkSubscriptionPricing {
+        @include flex-column-center;
+        // padding-left: 10px;
+        // padding-right: 10px;
+        background-color: $bgForkSubscriptionPricing;
+        background-image: url('../img/bgForkSubscriptionPricing.png');
+        background-size: 102vw;
+        background-repeat: no-repeat;
+        padding-bottom: 97px;
+        &__headline {
+           font-family: $montserrat;
+           color: $white;
+           font-size: 48px;
+           font-weight: 700;
+           margin-top: 78px;
+           margin-bottom: 78px;
+       }
+       .forkSubscriptionPricing__offers {
+            @include flex-row-center;
+            align-items: center;
+            justify-content: space-around;
+            width: 80vw;
+            max-width: 1200px;
+            padding-left: 10px;
+            padding-right: 10px;
+       }
+       .forkSubscriptionPricing__offersItem {
+           @include flex-column-center;
+            background-color: rgba(255, 255, 255, .1);
+            width: 257px;
+            margin-left: 6px;
+            margin-right: 6px;
+            &--dark {
+                width: 299px;
+                background-color: rgba(0, 0, 0, .1);
+            }
+       }
+       .forkSubscriptionPricing__offersheadline {
+            text-align: center;
+            padding-top: 45px;
+            width: 100%;
+            height: 66px;
+            background-color: rgba(255, 255, 255, .1);
+            font-size: 24px;
+            font-family: $montserrat;
+            font-weight: 400;
+            color: $white;
+            text-transform: uppercase;
+            &--dark{
+                width: 299px;
+                background-color: rgba(0, 0, 0, .1);
+            }
+       }
+        .forkSubscriptionPricing__price{
+            height: 69px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            &--dark {
+                height: 90px;
+                margin-top: 5px;
+            }
+       }
+        .forkSubscriptionPricing__currency {
+            font-family: $montserrat;
+            font-size: 60px;
+            font-weight: 300;
+            color: $white;
+            &--dark {
+                font-size: 82px;
+            }
+            &--thin {
+                font-size: 57px;
+                font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+            }
+        }
+        .forkSubscriptionPricing__cost {
+            font-family: $montserrat;
+            font-size: 60px;
+            font-weight: 700;
+            color: $white;
+            &--dark {
+               font-size: 82px;
+            }
+            &--thin {
+                font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+           }
+        }
+        .forkSubscriptionPricing__period {
+            font-family: $montserrat;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: -0.6px;
+            color: rgba(255, 255, 255, .3);
+            text-transform: uppercase;
+            margin-bottom: 36px;
+            &--dark {
+                margin-bottom: 45px;
+            }   
+        }
+        .forkSubscriptionPricing__line {
+            width: 60px;
+            height: 5px;
+            background-color: #8d81ac;
+            margin-bottom: 25px;
+            &--dark {
+                margin-bottom: 32px;
+            }
+        }
+        .forkSubscriptionPricing__bonus{
+            position: relative;
+            right: 2px;
+            height: 74px;
+            margin-bottom: 14px;
+            &--dark {
+                margin-bottom: 65px;
+            }
+        }
+        .forkSubscriptionPricing__bonusItem {
+            font-family: $montserrat;
+            font-size: 17px;
+            font-weight: 300;
+            letter-spacing: -0.4px;
+            color: $white;
+            line-height: 27px;
+            text-align: center;
+            &--dark {
+                line-height: 32px;
+            }
+        }
+        .forkSubscriptionPricing__button {
+            width: 160px;
+            height: 42px;
+            background-color: rgba(255, 255, 255, .15);
+            border-radius: 21px;
+            font-family: $montserrat;
+            color: $white;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 42px;
+            margin-bottom: 38px;
+            box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.0);
+            transition: background-color .3s ease, box-shadow .3s ease;
+            &--dark {
+                width: 190px;
+                height: 52px;
+                border-radius: 31px;
+                line-height: 55px;
+                font-size: 16px;
+            }
+        }
+        .forkSubscriptionPricing__button:hover {
+            background-color: rgba(0, 0, 0, .35);
+            box-shadow: 0px 4px 40px 1px rgba(0,0,0,0.4);
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 992px) {
+    .forkSubscriptionPricing {
+        @include flex-column-center;
+        background-color: $bgForkSubscriptionPricing;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-image: url('../img/bgForkSubscriptionPricing.png');
+        background-size: 102vw;
+        background-repeat: no-repeat;
+        padding-bottom: 97px;
+        &__headline {
+           font-family: $montserrat;
+           color: $white;
+           font-size: 42px;
+           font-weight: 700;
+           margin-top: 72px;
+           margin-bottom: 44px;
+           text-align: center;
+       }
+       .forkSubscriptionPricing__offers {
+            @include flex-row-center;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+            max-width: 1200px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+       }
+       .forkSubscriptionPricing__offersItem {
+           @include flex-column-center;
+            background-color: rgba(255, 255, 255, .1);
+            width: 257px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 41px;
+            &--dark {
+                width: 299px;
+                background-color: rgba(0, 0, 0, .1);
+                margin-right: -6px;
+                margin-left: 0px;
+            }
+       }
+       .forkSubscriptionPricing__offersheadline {
+            text-align: center;
+            padding-top: 39px;
+            width: 256px;
+            height: 58px;
+            background-color: rgba(255, 255, 255, .1);
+            font-size: 24px;
+            font-family: $montserrat;
+            font-weight: 400;
+            color: $white;
+            text-transform: uppercase;
+            &--dark{
+                padding-top: 45px;
+                width: 299px;
+                height: 65px;
+                background-color: rgba(0, 0, 0, .1);
+            }
+       }
+        .forkSubscriptionPricing__price{
+            height: 69px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            &--dark {
+                height: 90px;
+                margin-top: 5px;
+            }
+       }
+        .forkSubscriptionPricing__currency {
+            font-family: $montserrat;
+            font-size: 60px;
+            font-weight: 300;
+            color: $white;
+            &--dark {
+                font-size: 82px;
+            }
+            &--thin {
+                font-size: 57px;
+                font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+            }
+        }
+        .forkSubscriptionPricing__cost {
+            font-family: $montserrat;
+            font-size: 60px;
+            font-weight: 700;
+            color: $white;
+            &--dark {
+               font-size: 82px;
+            }
+            &--thin {
+                font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+           }
+        }
+        .forkSubscriptionPricing__period {
+            font-family: $montserrat;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: -0.6px;
+            color: rgba(255, 255, 255, .3);
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            &--dark {
+                margin-bottom: 45px;
+            }   
+        }
+        .forkSubscriptionPricing__line {
+            width: 60px;
+            height: 5px;
+            background-color: #8d81ac;
+            margin-bottom: 25px;
+            &--dark {
+                margin-bottom: 32px;
+            }
+        }
+        .forkSubscriptionPricing__bonus{
+            position: relative;
+            right: 2px;
+            height: 74px;
+            margin-bottom: 13px;
+            &--dark {
+                margin-bottom: 65px;
+            }
+        }
+        .forkSubscriptionPricing__bonusItem {
+            font-family: $montserrat;
+            font-size: 17px;
+            font-weight: 300;
+            letter-spacing: -0.4px;
+            color: $white;
+            line-height: 27px;
+            text-align: center;
+            &--dark {
+                line-height: 32px;
+            }
+        }
+        .forkSubscriptionPricing__button {
+            width: 160px;
+            height: 42px;
+            background-color: rgba(255, 255, 255, .15);
+            border-radius: 21px;
+            font-family: $montserrat;
+            color: $white;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 42px;
+            margin-bottom: 38px;
+            box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.0);
+            transition: background-color .3s ease, box-shadow .3s ease;
+            &--dark {
+                width: 190px;
+                height: 52px;
+                border-radius: 31px;
+                line-height: 55px;
+                font-size: 16px;
+                margin-bottom: 47px;
+            }
+        }
+        .forkSubscriptionPricing__button:hover {
+            background-color: rgba(0, 0, 0, .35);
+            box-shadow: 0px 4px 40px 1px rgba(0,0,0,0.4);
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .forkSubscriptionPricing {
+        @include flex-column-center;
+        min-width: 320px;
+        // padding-left: 10px;
+        // padding-right: 10px;
+        background-color: $bgForkSubscriptionPricing;
+        padding-bottom: 97px;
+        &__headline {
+           font-family: $montserrat;
+           color: $white;
+           font-size: 28px;
+           font-weight: 700;
+           margin-top: 65px;
+           margin-bottom: 46px;
+           text-align: center;
+           line-height: 41px;
+       }
+       .forkSubscriptionPricing__offers {
+            @include flex-row-center;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+            max-width: 1200px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+       }
+       .forkSubscriptionPricing__offersItem {
+           @include flex-column-center;
+            background-color: rgba(255, 255, 255, .1);
+            width: 257px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 14px;
+            &--dark {
+                width: 299px;
+                background-color: rgba(0, 0, 0, .1);
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+       }
+       .forkSubscriptionPricing__offersheadline {
+            text-align: center;
+            padding-top: 40px;
+            width: 256px;
+            height: 58px;
+            background-color: rgba(255, 255, 255, .1);
+            font-size: 24px;
+            font-family: $montserrat;
+            font-weight: 400;
+            color: $white;
+            text-transform: uppercase;
+            &--dark{
+                padding-top: 45px;
+                width: 299px;
+                height: 65px;
+                background-color: rgba(0, 0, 0, .1);
+            }
+       }
+        .forkSubscriptionPricing__price{
+            height: 69px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            &--dark {
+                height: 90px;
+                margin-top: 5px;
+            }
+       }
+        .forkSubscriptionPricing__currency {
+            font-family: $montserrat;
+            font-size: 60px;
+            font-weight: 300;
+            color: $white;
+            &--dark {
+                font-size: 82px;
+            }
+            &--thin {
+            }
+        }
+        .forkSubscriptionPricing__cost {
+            font-family: $montserrat;
+            font-size: 60px;
+            font-weight: 700;
+            color: $white;
+            &--dark {
+               font-size: 82px;
+            }
+            &--thin {
+           }
+        }
+        .forkSubscriptionPricing__period {
+            font-family: $montserrat;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: -0.6px;
+            color: rgba(255, 255, 255, .3);
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            &--dark {
+                margin-bottom: 45px;
+            }   
+        }
+        .forkSubscriptionPricing__line {
+            width: 60px;
+            height: 5px;
+            background-color: #8d81ac;
+            margin-bottom: 25px;
+            &--dark {
+                margin-bottom: 32px;
+            }
+        }
+        .forkSubscriptionPricing__bonus{
+            position: relative;
+            right: 2px;
+            height: 74px;
+            margin-bottom: 13px;
+            &--dark {
+                margin-bottom: 65px;
+            }
+        }
+        .forkSubscriptionPricing__bonusItem {
+            font-family: $montserrat;
+            font-size: 17px;
+            font-weight: 300;
+            letter-spacing: -0.4px;
+            color: $white;
+            line-height: 27px;
+            text-align: center;
+            &--dark {
+                line-height: 32px;
+            }
+        }
+        .forkSubscriptionPricing__button {
+            width: 160px;
+            height: 42px;
+            background-color: rgba(255, 255, 255, .15);
+            border-radius: 21px;
+            font-family: $montserrat;
+            color: $white;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 42px;
+            margin-bottom: 38px;
+            box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.0);
+            transition: background-color .3s ease, box-shadow .3s ease;
+            &--dark {
+                width: 190px;
+                height: 52px;
+                border-radius: 31px;
+                line-height: 55px;
+                font-size: 16px;
+                margin-bottom: 47px;
+            }
+        }
+        .forkSubscriptionPricing__button:hover {
+            background-color: rgba(0, 0, 0, .35);
+            box-shadow: 0px 4px 40px 1px rgba(0,0,0,0.4);
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.forkApp { 
+    &__about {
+        background: url(/src/img/testmonials-bg@1X.png);
+        height: 762px;
+  
+        &-innerwrap {
+           padding: 87px 10px 0 10px;
+           max-width: 1220px;
+           margin: 0 auto;
+        }
+  
+        &-title {
+           font-size: 33px;
+           text-align: center;
+           font-family: Montserrat-Bold;
+           color: #FFF;
+           margin-bottom: 84px;
+        }
+  
+        &-content {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+  
+            &-title {
+                font-size: 16px;
+                text-align: center;
+                font-family: Lato-italic;
+                color: #FFF;
+                line-height: 23px;
+            }
+  
+            &-logo {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 19px;
+                height: 64px;
+                align-items: center;
+            }
+  
+            &-item {
+                width: 28%;
+                margin-bottom: 92px;
+                &:nth-last-child(-n+4) {
+                    & div:first-child {
+                        margin-bottom: 11px;
+                    }
+                }
+            }
+  
+            &-footer {
+                font-size: 14px;
+                font-family: Lato;
+                color: #FFF;
+                text-align: center;
+                max-width: 900px;
+                margin: 21px auto 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .forkApp {
+        &__about {
+            background: url(/src/img/Layer1@1X.png);
+            height: 1078px;
+   
+            &-innerwrap {
+               padding-top: 68px;
+            }
+   
+            &-title {
+               font-size: 30px;
+            }
+   
+            &-content {
+                &-item {
+                    width: 45%;
+                    margin-bottom: 60px;
+
+                    &:nth-last-child(-n+5) {
+                        margin-bottom: 41px;
+                    }
+                }
+                &-footer {
+                    max-width: 688px;
+                    margin-top: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .forkApp {
+        &__about {
+            background: url(/src/img/testmonials-bgSmall.png);
+            height: 1552px;
+   
+            &-innerwrap {
+               padding-top: 53px;
+            }
+   
+            &-title {
+               font-size: 27px;
+               margin-bottom: 37px;
+            }
+   
+            &-content {
+               justify-content: center;
+   
+               &-item {
+                  width: 92%;
+                  margin-bottom: 35px;
+               }
+   
+               &-footer {
+                  display: none;
+               }
+            }
+         }
+    }
+}
